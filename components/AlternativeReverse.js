@@ -38,7 +38,6 @@ export default function AlternativeReverse(props) {
         <Image
           src={props.image}
           alt="3 women looking at a laptop"
-          fit="contain"
           layout="responsive"
           bg="gray.100"
         />
