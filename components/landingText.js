@@ -36,7 +36,7 @@ export default function App() {
             display={{ base: "block", lg: "inline" }}
             w="full"
             bgClip="text"
-            bgGradient="linear(to-r, green.400,purple.500)"
+            bgGradient="linear(to-r, blue.400,teal.500)"
             fontWeight="extrabold"
           >
             Nick MacKenzie
@@ -57,7 +57,7 @@ export default function App() {
             display={{ base: "block", lg: "inline" }}
             w="full"
             bgClip="text"
-            bgGradient="linear(to-r, green.400,purple.500)"
+            bgGradient="linear(to-r, blue.400,teal.500)"
             fontWeight="extrabold"
           >
             computers&nbsp;
@@ -67,7 +67,7 @@ export default function App() {
             display={{ base: "block", lg: "inline" }}
             w="full"
             bgClip="text"
-            bgGradient="linear(to-r, green.400,purple.500)"
+            bgGradient="linear(to-r, blue.400,teal.500)"
             fontWeight="extrabold"
           >
             making things.
@@ -121,13 +121,14 @@ export default function App() {
         >
           <Button
             as="a"
-            colorScheme="gray"
+            colorScheme="blue"
             display="inline-flex"
             alignItems="center"
             justifyContent="center"
             w={{ base: "full", sm: "auto" }}
             mb={{ base: 2, sm: 0 }}
             size="lg"
+            m="2"
           >
             Projects
             <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
@@ -140,10 +141,11 @@ export default function App() {
           </Button>
           <Button
             as="a"
-            colorScheme="gray"
+            colorScheme="teal"
             display="inline-flex"
             alignItems="center"
             justifyContent="center"
+            m="2"
             w={{ base: "full", sm: "auto" }}
             mb={{ base: 2, sm: 0 }}
             size="lg"
@@ -158,21 +160,6 @@ export default function App() {
             </Icon>
           </Button>
         </Stack>
-        <Flex class="social-bar" justifyContent="space-evenly" width="100%">
-          <Link href="https://github.com/nickmackenzie">
-            <GoLogoGithub size={"2.7rem"}></GoLogoGithub>
-          </Link>
-          <Link href="https://www.linkedin.com/in/nick-mackenzie-5061411bb/">
-            <GrLinkedin margin="2" size={"2rem"}></GrLinkedin>
-          </Link>
-          <Link href="NickMackenzie_Resume.pdf">
-            <GrDocumentPdf
-              color="white"
-              margin="2"
-              size={"2rem"}
-            ></GrDocumentPdf>
-          </Link>
-        </Flex>
       </Box>
     </Box>
   );
