@@ -34,13 +34,15 @@ export default function AlternativeReverse(props) {
         content: '" "',
       }}
     >
-      <Image
-        src={props.image}
-        alt="3 women looking at a laptop"
-        fit="contain"
-        bg="gray.100"
-        loading="lazy"
-      />
+      <Box h="100%">
+        <Image
+          src={props.image}
+          alt="3 women looking at a laptop"
+          fit="contain"
+          bg="gray.100"
+          loading="lazy"
+        />
+      </Box>
       <Flex
         direction="column"
         alignItems="start"
