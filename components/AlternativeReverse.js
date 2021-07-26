@@ -40,6 +40,11 @@ export default function AlternativeReverse(props) {
           alt="3 women looking at a laptop"
           layout="responsive"
           bg="gray.100"
+          h="400px"
+          w="auto"
+          margin="2rem"
+          rounded="2xl"
+          shadow="lg"
         />
       </Box>
       <Flex
@@ -47,9 +52,12 @@ export default function AlternativeReverse(props) {
         alignItems="start"
         justifyContent="center"
         px={{ base: 4, md: 8, lg: 20 }}
-        py={24}
+        py={12}
+        shadow="lg"
         zIndex={3}
         bg="blue.100"
+        margin="2rem"
+        rounded="2xl"
       >
         <chakra.span
           color={useColorModeValue("brand.600", "gray.300")}
