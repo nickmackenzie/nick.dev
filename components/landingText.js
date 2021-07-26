@@ -8,6 +8,7 @@ import {
   Image,
   Text,
   Icon,
+  Link,
   Flex,
   Center,
 } from "@chakra-ui/react";
@@ -73,10 +74,10 @@ export default function App() {
         </chakra.h4>
         <Flex
           class="tech-logos"
-          justifyContent="space-between"
+          justifyContent="space-around"
           m="2"
           w="90%"
-          flexDir="row"
+          flexDir="col"
         >
           <svg width="4rem" viewBox="0 0 128 128">
             <g fill="#61DAFB">
@@ -113,23 +114,7 @@ export default function App() {
         >
           <div class="wrapper">
             <div class="hero-image">
-              <div class="hero-text">
-                <Flex class="social-bar" justifyContent="space-around">
-                  <a href="https://github.com/nickmackenzie">
-                    <GoLogoGithub margin="2" size={"3.5rem"}></GoLogoGithub>
-                  </a>
-                  <a href="https://www.linkedin.com/in/nick-mackenzie-5061411bb/">
-                    <GrLinkedin margin="2" size={"3.5rem"}></GrLinkedin>
-                  </a>
-                  <a href="NickMackenzie_Resume.pdf">
-                    <GrDocumentPdf
-                      color="white"
-                      margin="2"
-                      size={"3.5rem"}
-                    ></GrDocumentPdf>
-                  </a>
-                </Flex>
-              </div>
+              <div class="hero-text"></div>
             </div>
           </div>
         </chakra.p>
@@ -178,6 +163,21 @@ export default function App() {
             </Icon>
           </Button>
         </Stack>
+        <Flex class="social-bar" justifyContent="center" width="100%">
+          <Link href="https://github.com/nickmackenzie">
+            <GoLogoGithub size={"3rem"}></GoLogoGithub>
+          </Link>
+          <Link href="https://www.linkedin.com/in/nick-mackenzie-5061411bb/">
+            <GrLinkedin margin="2" size={"2rem"}></GrLinkedin>
+          </Link>
+          <Link href="NickMackenzie_Resume.pdf">
+            <GrDocumentPdf
+              color="white"
+              margin="2"
+              size={"3rem"}
+            ></GrDocumentPdf>
+          </Link>
+        </Flex>
       </Box>
     </Box>
   );
