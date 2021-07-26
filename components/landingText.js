@@ -12,6 +12,7 @@ import {
   Flex,
   Center,
 } from "@chakra-ui/react";
+import { Img } from "@chakra-ui/react";
 import { GoLogoGithub } from "react-icons/go";
 import { GrLinkedin, GrDocumentPdf } from "react-icons/gr";
 export default function App() {
@@ -72,13 +73,7 @@ export default function App() {
             making things.
           </Text>
         </chakra.h4>
-        <Flex
-          class="tech-logos"
-          justifyContent="space-around"
-          m="2"
-          w="90%"
-          flexDir="col"
-        >
+        {/* <Flex class="tech-logos" flexDirection="row">
           <svg width="4rem" viewBox="0 0 128 128">
             <g fill="#61DAFB">
               <circle cx="64" cy="47.5" r="9.3"></circle>
@@ -105,7 +100,7 @@ export default function App() {
               fill="#6762A6"
             ></path>
           </svg>{" "}
-        </Flex>
+        </Flex> */}
         <chakra.p
           px={{ base: 0, lg: 24 }}
           mb={6}
@@ -163,9 +158,9 @@ export default function App() {
             </Icon>
           </Button>
         </Stack>
-        <Flex class="social-bar" justifyContent="center" width="100%">
+        <Flex class="social-bar" justifyContent="space-evenly" width="100%">
           <Link href="https://github.com/nickmackenzie">
-            <GoLogoGithub size={"3rem"}></GoLogoGithub>
+            <GoLogoGithub size={"2.7rem"}></GoLogoGithub>
           </Link>
           <Link href="https://www.linkedin.com/in/nick-mackenzie-5061411bb/">
             <GrLinkedin margin="2" size={"2rem"}></GrLinkedin>
@@ -174,7 +169,7 @@ export default function App() {
             <GrDocumentPdf
               color="white"
               margin="2"
-              size={"3rem"}
+              size={"2rem"}
             ></GrDocumentPdf>
           </Link>
         </Flex>
