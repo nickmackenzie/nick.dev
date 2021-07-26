@@ -16,14 +16,7 @@ export default function AlternativeProject(props) {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0}>
       <Flex bg="brand.400">
-        <Image
-          src={props.image}
-          alt=""
-          fit="contain"
-          w="full"
-          h={{ base: 32, md: "full" }}
-          opacity={0.9}
-        />
+        <Image src={props.image} alt="" fit="contain" opacity={0.9} />
       </Flex>
       <Flex
         direction="column"
