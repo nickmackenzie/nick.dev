@@ -39,8 +39,8 @@ export default function AlternativeReverse(props) {
           src={props.image}
           alt="3 women looking at a laptop"
           fit="contain"
+          layout="responsive"
           bg="gray.100"
-          loading="lazy"
         />
       </Box>
       <Flex
