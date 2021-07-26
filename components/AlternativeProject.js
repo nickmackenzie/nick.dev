@@ -21,7 +21,7 @@ export default function AlternativeProject(props) {
           alt=""
           fit="contain"
           w="full"
-          h={{ base: 64, md: "full" }}
+          h={{ base: 32, md: "full" }}
           opacity={0.9}
         />
       </Flex>
