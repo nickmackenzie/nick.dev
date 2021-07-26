@@ -28,7 +28,7 @@ export default function Home() {
             <div class="card-list keen-slider" ref={sliderRef} id="projectCard">
               <article class="keen-slider__slide card ">
                 <figure class="card-image">
-                  <img
+                  <Image
                     src="https://i.imgur.com/edke0g8.png"
                     alt="Logo for A Full Stack App using MongoDB as a backend and ReactJS with
                     TailwindCSS as a front-end.It will match a list of baby

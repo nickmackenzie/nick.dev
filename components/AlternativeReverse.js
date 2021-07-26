@@ -1,20 +1,48 @@
 import React from "react";
+import { FiExternalLink } from "react-icons/fi";
 import {
   chakra,
+  Icon,
   Box,
   useColorModeValue,
   Flex,
+  Badge,
+  Input,
+  VisuallyHidden,
   SimpleGrid,
-  Icon,
+  Button,
+  InputGroup,
+  InputRightElement,
   Image,
   propNames,
 } from "@chakra-ui/react";
 
-import { FiExternalLink } from "react-icons/fi";
-
-export default function AlternativeProject(props) {
+export default function AlternativeReverse(props) {
   return (
-    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0}>
+    <SimpleGrid
+      columns={{ base: 1, md: 2 }}
+      spacing={0}
+      _after={{
+        bg: "brand.500",
+        opacity: 0.25,
+        pos: "absolute",
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        zIndex: -1,
+        content: '" "',
+      }}
+    >
+      <Image
+        src={props.image}
+        alt="3 women looking at a laptop"
+        fit="contain"
+        w="full"
+        h={{ base: 64, md: "full" }}
+        bg="gray.100"
+        loading="lazy"
+      />
       <Flex
         direction="column"
         alignItems="start"
@@ -22,6 +50,7 @@ export default function AlternativeProject(props) {
         px={{ base: 4, md: 8, lg: 20 }}
         py={24}
         zIndex={3}
+        bg="blue.100"
       >
         <chakra.span
           color={useColorModeValue("brand.600", "gray.300")}
@@ -97,19 +126,7 @@ export default function AlternativeProject(props) {
           </chakra.a>
         </Box>{" "}
       </Flex>
-
-      <Flex bg="brand.400">
-        <Image
-          src={props.image}
-          alt=""
-          fit="cover"
-          w="full"
-          h={{ base: 64, md: "full" }}
-          bg="gray.100"
-          loading="lazy"
-          opacity={0.9}
-        />
-      </Flex>
+      <Box></Box>
     </SimpleGrid>
   );
 }

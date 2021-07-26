@@ -19,11 +19,9 @@ export default function AlternativeProject(props) {
         <Image
           src={props.image}
           alt=""
-          fit="cover"
+          fit="contain"
           w="full"
           h={{ base: 64, md: "full" }}
-          bg="gray.100"
-          loading="lazy"
           opacity={0.9}
         />
       </Flex>
@@ -34,6 +32,7 @@ export default function AlternativeProject(props) {
         px={{ base: 4, md: 8, lg: 20 }}
         py={24}
         zIndex={3}
+        bg="gray.100"
       >
         <chakra.span
           color={useColorModeValue("brand.600", "gray.300")}
