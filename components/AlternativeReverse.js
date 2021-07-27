@@ -36,15 +36,14 @@ export default function AlternativeReverse(props) {
       }}
     >
       <Flex justifyItems="center" justifyContent="center">
-        <Box maxWidth="430px" marginTop="8rem">
+        <Box maxWidth="60rem" marginTop="8rem">
           <Image
             src={props.image}
             alt="3 women looking at a laptop"
             w="auto"
             h="auto"
-            bg="gray.500"
+            bg="gray.300"
             loading="lazy"
-            rounded="2xl"
             shadow="lg"
           />
         </Box>{" "}

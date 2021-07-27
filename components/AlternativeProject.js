@@ -15,8 +15,18 @@ import { FiExternalLink } from "react-icons/fi";
 export default function AlternativeProject(props) {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0}>
-      <Flex bg="brand.400">
-        <Image src={props.image} alt="" fit="contain" opacity={0.9} />
+      <Flex justifyItems="center" justifyContent="center">
+        <Box maxWidth="600px" marginTop="8rem">
+          <Image
+            src={props.image}
+            alt="3 women looking at a laptop"
+            w="auto"
+            h="auto"
+            bg="gray.200"
+            loading="lazy"
+            shadow="lg"
+          />
+        </Box>{" "}
       </Flex>
       <Flex
         direction="column"
@@ -25,7 +35,6 @@ export default function AlternativeProject(props) {
         px={{ base: 4, md: 8, lg: 20 }}
         py={24}
         zIndex={3}
-        bg="gray.100"
       >
         <chakra.span
           color={useColorModeValue("brand.600", "gray.300")}

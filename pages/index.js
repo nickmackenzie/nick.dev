@@ -38,7 +38,7 @@ export default function Home() {
         name="NameMatch"
       ></AlternativeReverse>
       <AlternativeProject
-        image="/images/souschef.svg"
+        image="/images/souschef.png"
         description="A Full Stack React app with nodejs and MongoDB. It Helps organize working cooks with a global prep lists that sets the right amount of 'par-lev' according to the day. "
         liveURL=""
         sourceCodeURL=""
@@ -48,17 +48,17 @@ export default function Home() {
       ></AlternativeProject>
 
       <AlternativeReverse
-        image="images/hangman.svg"
+        image="images/hangman.png"
         description="A hangman game made with pure JavaScript, HTML and CSS."
         liveURL=""
         sourceCodeURL=""
         techIcons=""
-        stack="HTML | CSS | JavaScipt"
+        stack="HTML | CSS | JavaScript"
         name="Don't Fall Off The Water Fall!"
       ></AlternativeReverse>
 
       <AlternativeProject
-        image="/images/trivia.svg"
+        image="/images/trivia.png"
         description="A multiplayer trivia game with live leader boards. Utilizes Django, Opentdb API and a MySQL database."
         liveURL=""
         sourceCodeURL=""
