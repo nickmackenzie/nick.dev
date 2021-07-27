@@ -63,52 +63,55 @@ export default function AlternativeProject(props) {
         >
           {props.description}
         </chakra.p>
-        <Box display="inline-flex" rounded="md" shadow="md">
-          <chakra.a
-            mt={2}
-            py={8}
-            display="inline-flex"
-            alignItems="center"
-            justifyContent="center"
-            px={5}
-            py={3}
-            border="solid transparent"
-            fontWeight="bold"
-            w="full"
-            rounded="md"
-            color={useColorModeValue("black")}
-            bg={useColorModeValue("brand.600", "brand.500")}
-            _hover={{
-              bg: useColorModeValue("brand.700", "brand.600"),
-            }}
-          >
-            Live Demo
-            <Icon as={FiExternalLink} ml={2} />
-          </chakra.a>
-        </Box>
-        <Box display="inline-flex" rounded="md" shadow="md">
-          <chakra.a
-            mt={2}
-            py={8}
-            display="inline-flex"
-            alignItems="center"
-            justifyContent="center"
-            px={5}
-            py={3}
-            border="solid transparent"
-            fontWeight="bold"
-            w="full"
-            rounded="md"
-            color={useColorModeValue("black")}
-            bg={useColorModeValue("brand.600", "brand.500")}
-            _hover={{
-              bg: useColorModeValue("brand.700", "brand.600"),
-            }}
-          >
-            Source Code
-            <Icon as={FiExternalLink} ml={2} />
-          </chakra.a>
-        </Box>{" "}
+
+        <Flex justifyContent="space-between" width="60%">
+          <Box display="inline-flex" rounded="md" shadow="md">
+            <chakra.a
+              mt={2}
+              py={8}
+              display="inline-flex"
+              alignItems="center"
+              justifyContent="center"
+              px={5}
+              py={3}
+              border="solid transparent"
+              fontWeight="bold"
+              w="full"
+              rounded="md"
+              color={useColorModeValue("black")}
+              bg={useColorModeValue("gray.400", "brand.500")}
+              _hover={{
+                bg: useColorModeValue("gray.500", "brand.600"),
+              }}
+            >
+              Live Demo
+              <Icon as={FiExternalLink} ml={2} />
+            </chakra.a>
+          </Box>
+          <Box display="inline-flex" rounded="md" shadow="md">
+            <chakra.a
+              mt={2}
+              py={8}
+              display="inline-flex"
+              alignItems="center"
+              justifyContent="center"
+              px={5}
+              py={3}
+              border="solid transparent"
+              fontWeight="bold"
+              w="full"
+              rounded="md"
+              color={useColorModeValue("black")}
+              bg={useColorModeValue("gray.400", "brand.500")}
+              _hover={{
+                bg: useColorModeValue("gray.500", "brand.600"),
+              }}
+            >
+              Source Code
+              <Icon as={FiExternalLink} ml={2} />
+            </chakra.a>
+          </Box>
+        </Flex>
       </Flex>
     </SimpleGrid>
   );

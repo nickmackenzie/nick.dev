@@ -141,7 +141,7 @@ export default function App() {
           </Button>
           <Button
             as="a"
-            colorScheme="teal"
+            colorScheme="blue"
             display="inline-flex"
             alignItems="center"
             justifyContent="center"
