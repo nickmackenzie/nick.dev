@@ -16,7 +16,7 @@ export default function AlternativeProject(props) {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0}>
       <Flex justifyItems="center" justifyContent="center">
-        <Box maxWidth="600px" marginTop="8rem">
+        <Box maxWidth="60rem" marginTop="2rem">
           <Image
             src={props.image}
             alt="3 women looking at a laptop"
