@@ -2,7 +2,6 @@ import React from "react";
 import { FiExternalLink } from "react-icons/fi";
 import {
   chakra,
-  Icon,
   Box,
   useColorModeValue,
   Flex,
@@ -14,6 +13,7 @@ import {
   InputGroup,
   InputRightElement,
   Image,
+  Icon,
   propNames,
 } from "@chakra-ui/react";
 
@@ -34,30 +34,27 @@ export default function AlternativeReverse(props) {
         content: '" "',
       }}
     >
-      <Box h="100%">
+      <div className={"image-container"}>
         <Image
           src={props.image}
           alt="3 women looking at a laptop"
-          layout="responsive"
+          fit="contain"
+          w="full"
+          h={{ base: "full", md: "full" }}
           bg="gray.100"
-          h="400px"
-          w="auto"
-          margin="2rem"
-          rounded="2xl"
-          shadow="lg"
+          loading="lazy"
+          layout="fill"
+          className={"image"}
         />
-      </Box>
+      </div>
+
       <Flex
         direction="column"
         alignItems="start"
         justifyContent="center"
         px={{ base: 4, md: 8, lg: 20 }}
-        py={12}
-        shadow="lg"
+        py={24}
         zIndex={3}
-        bg="blue.100"
-        margin="2rem"
-        rounded="2xl"
       >
         <chakra.span
           color={useColorModeValue("brand.600", "gray.300")}
