@@ -34,20 +34,17 @@ export default function AlternativeReverse(props) {
         content: '" "',
       }}
     >
-      <div className={"image-container"}>
+      <Flex justifyItems="center" justifyContent="center">
         <Image
           src={props.image}
           alt="3 women looking at a laptop"
-          fit="contain"
-          w="full"
-          h={{ base: "full", md: "full" }}
+          w="auto"
+          h="auto"
           bg="gray.100"
           loading="lazy"
           layout="fill"
-          className={"image"}
         />
-      </div>
-
+      </Flex>
       <Flex
         direction="column"
         alignItems="start"
