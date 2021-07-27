@@ -27,7 +27,7 @@ export default function Home() {
 
       <LandingText></LandingText>
       <AlternativeReverse
-        image="/images/namematch.svg"
+        image="/images/namematch.png"
         description="A Full Stack App using MongoDB as a backend and ReactJS with
             TailwindCSS as a front-end. This app always user to create their own
             account and set a personal code."

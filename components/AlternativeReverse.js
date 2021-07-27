@@ -42,9 +42,10 @@ export default function AlternativeReverse(props) {
             alt="3 women looking at a laptop"
             w="auto"
             h="auto"
-            bg="gray.100"
+            bg="gray.500"
             loading="lazy"
             rounded="2xl"
+            shadow="lg"
           />
         </Box>{" "}
       </Flex>
