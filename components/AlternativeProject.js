@@ -8,6 +8,7 @@ import {
   Icon,
   Image,
   propNames,
+  Button,
 } from "@chakra-ui/react";
 
 import { FiExternalLink } from "react-icons/fi";
@@ -64,53 +65,51 @@ export default function AlternativeProject(props) {
           {props.description}
         </chakra.p>
 
-        <Flex justifyContent="space-between" width="60%">
-          <Box display="inline-flex" rounded="md" shadow="md">
-            <chakra.a
-              mt={2}
-              py={8}
-              display="inline-flex"
-              alignItems="center"
-              justifyContent="center"
-              px={5}
-              py={3}
-              border="solid transparent"
-              fontWeight="bold"
-              w="full"
-              rounded="md"
-              color={useColorModeValue("black")}
-              bg={useColorModeValue("gray.400", "brand.500")}
-              _hover={{
-                bg: useColorModeValue("gray.500", "brand.600"),
-              }}
-            >
-              Live Demo
-              <Icon as={FiExternalLink} ml={2} />
-            </chakra.a>
-          </Box>
-          <Box display="inline-flex" rounded="md" shadow="md">
-            <chakra.a
-              mt={2}
-              py={8}
-              display="inline-flex"
-              alignItems="center"
-              justifyContent="center"
-              px={5}
-              py={3}
-              border="solid transparent"
-              fontWeight="bold"
-              w="full"
-              rounded="md"
-              color={useColorModeValue("black")}
-              bg={useColorModeValue("gray.400", "brand.500")}
-              _hover={{
-                bg: useColorModeValue("gray.500", "brand.600"),
-              }}
-            >
-              Source Code
-              <Icon as={FiExternalLink} ml={2} />
-            </chakra.a>
-          </Box>
+        <Flex>
+          <Button
+            as="a"
+            colorScheme="green"
+            display="inline-flex"
+            alignItems="center"
+            justifyContent="center"
+            w={{ base: "full", sm: "auto" }}
+            mb={{ base: 2, sm: 0 }}
+            size="lg"
+            m="2"
+            target="_blank"
+            href={props.liveURL}
+          >
+            Live Demo
+            <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fillRule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </Icon>
+          </Button>
+          <Button
+            as="a"
+            colorScheme="green"
+            display="inline-flex"
+            alignItems="center"
+            justifyContent="center"
+            w={{ base: "full", sm: "auto" }}
+            mb={{ base: 2, sm: 0 }}
+            size="lg"
+            target="_blank"
+            m="2"
+            href={props.sourceCodeURL}
+          >
+            Source Code
+            <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fillRule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </Icon>
+          </Button>
         </Flex>
       </Flex>
     </SimpleGrid>
