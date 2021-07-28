@@ -6,8 +6,7 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import Nav from "../components/nav";
 import Slider from "../components/slider";
 import Project from "../components/project";
-import AlternativeProject from "../components/AlternativeProject";
-import AlternativeReverse from "../components/AlternativeReverse";
+
 export default function Home() {
   return (
     <div>
@@ -26,46 +25,6 @@ export default function Home() {
       ></Image> */}
 
       <LandingText></LandingText>
-      <AlternativeReverse
-        image="/images/namematch.png"
-        description="A Full Stack App using MongoDB as a backend and ReactJS with
-            TailwindCSS as a front-end. This app always user to create their own
-            account and set a personal code."
-        liveURL="http://name-match.herokuapp.com/"
-        sourceCodeURL="https://github.com/nickmackenzie/namematch"
-        techIcons=""
-        stack="ReactJS | NodeJS | Mongo-DB"
-        name="NameMatch"
-      ></AlternativeReverse>
-      <AlternativeProject
-        image="/images/souschef.png"
-        description="A Full Stack React app with nodejs and MongoDB. It Helps organize working cooks with a global prep lists that sets the right amount of 'par-lev' according to the day. "
-        liveURL="https://souschef3.herokuapp.com/"
-        sourceCodeURL="https://github.com/nickmackenzie/souschef"
-        techIcons=""
-        stack="ReactJS | Mongo-DB | NodeJs | JWT-Authentication"
-        name="SousChef"
-      ></AlternativeProject>
-
-      <AlternativeReverse
-        image="images/hangman.png"
-        description="A hangman game made with pure JavaScript, HTML and CSS."
-        liveURL="https://nickmackenzie.github.io/hangman/"
-        sourceCodeURL="https://github.com/nickmackenzie/hangman"
-        techIcons=""
-        stack="HTML | CSS | JavaScript"
-        name="Don't Fall Off The Water Fall!"
-      ></AlternativeReverse>
-
-      <AlternativeProject
-        image="/images/trivia.png"
-        description="A multiplayer trivia game with live leader boards. Utilizes Django, Opentdb API and a MySQL database."
-        liveURL="http://trivia-night-django-app.herokuapp.com/"
-        sourceCodeURL="https://github.com/nickmackenzie/Trivia-Night"
-        techIcons=""
-        stack="Django | Python | MySQL | JavaScript"
-        name="Trivia Night"
-      ></AlternativeProject>
     </div>
   );
 }
