@@ -28,6 +28,7 @@ import { FaSass } from "react-icons";
 import AlternativeProject from "../components/AlternativeProject";
 import AlternativeReverse from "../components/AlternativeReverse";
 import ContactMe from "../components/ContactMe";
+import ModalAbout from "../components/ModalAbout";
 let iconSize = "6rem";
 const devIconStyle = {
   react: { fill: "gray" },
@@ -73,7 +74,7 @@ export default function App() {
               fontWeight="extrabold"
             >
               Nick MacKenzie
-            </Text>
+            </Text>{" "}
             <br></br>
             <Text
               display={{ base: "block", lg: "inline" }}
@@ -226,6 +227,15 @@ export default function App() {
         stack="Django | Python | MySQL | JavaScript"
         name="Trivia Night"
       ></AlternativeProject>
+      <AlternativeReverse
+        image="images/codesave.png"
+        description="A hangman game made with pure JavaScript, HTML and CSS."
+        liveURL="https://nickmackenzie.github.io/hangman/"
+        sourceCodeURL="https://github.com/nickmackenzie/hangman"
+        techIcons=""
+        stack="NodeJS | ExpressJS | MongoDB | Google People API"
+        name="CodeSave"
+      ></AlternativeReverse>
     </>
   );
 }
