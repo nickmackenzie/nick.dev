@@ -80,7 +80,7 @@ export default function ContactMe() {
         placement="right"
         onClose={onClose}
         finalFocusRef={btnRef}
-        size={"lg"}
+        size={"sm"}
       >
         <DrawerOverlay />
         <DrawerContent>
@@ -99,6 +99,7 @@ export default function ContactMe() {
                   color="white"
                   background="black"
                   onClick={onClose}
+                  m="1"
                 ></CloseButton>
                 <Image
                   w="full"
