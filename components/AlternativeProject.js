@@ -23,6 +23,8 @@ export default function AlternativeProject(props) {
             alt="3 women looking at a laptop"
             w="auto"
             h="auto"
+            rounded="md"
+            m="4"
             bg="gray.200"
             loading="lazy"
             shadow="lg"

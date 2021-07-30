@@ -42,7 +42,9 @@ export default function AlternativeReverse(props) {
             alt="3 women looking at a laptop"
             w="auto"
             h="auto"
-            bg="gray.300"
+            rounded="md"
+            m="4"
+            bg="gray.100"
             loading="lazy"
             shadow="lg"
           />

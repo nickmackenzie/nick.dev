@@ -199,6 +199,7 @@ export default function App() {
         techIcons=""
         stack="ReactJS | NodeJS | Mongo-DB"
         name="NameMatch"
+        altText=""
       ></AlternativeReverse>
       <AlternativeProject
         image="/images/souschef.png"
