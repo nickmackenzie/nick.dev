@@ -51,7 +51,12 @@ export default function App() {
 
   return (
     <>
-      <Box px={8} py={24} mx="auto">
+      <Box
+        px={8}
+        py={24}
+        mx="auto"
+        backgroundImage="linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%)"
+      >
         <Box
           w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
           mx="auto"
@@ -69,7 +74,7 @@ export default function App() {
               display={{ base: "block", lg: "inline" }}
               w="full"
               bgClip="text"
-              bgGradient="linear(to-r, blue.400,teal.500)"
+              bgGradient="linear(to-r, gray.800,gray.600)"
               fontWeight="extrabold"
             >
               Nick MacKenzie
@@ -79,7 +84,7 @@ export default function App() {
               display={{ base: "block", lg: "inline" }}
               w="full"
               bgClip="text"
-              color="gray.600"
+              bgGradient="linear(to-r, gray.600,gray.800)"
               fontSize="2.6rem"
             >
               Web Developer
@@ -206,9 +211,8 @@ export default function App() {
       <Box ref={myRef}></Box> {/**For the project anchor link */}
       <AlternativeReverse
         image="/images/namematch.png"
-        description="A Full Stack App using MongoDB as a backend and ReactJS with
-            TailwindCSS as a front-end. This app always user to create their own
-            account and set a personal code."
+        description="A Full Stack App using MongoDB for the database and ReactJS with
+            ChakaraUI as a front-end. This app allows users to 'like' or 'dislike' name suggestions and match with your partner."
         liveURL="http://name-match.herokuapp.com/"
         sourceCodeURL="https://github.com/nickmackenzie/namematch"
         techIcons=""
@@ -218,7 +222,7 @@ export default function App() {
       ></AlternativeReverse>
       <AlternativeProject
         image="/images/souschef.png"
-        description="A Full Stack React app with nodejs and MongoDB. It Helps organize working cooks with a global prep lists that sets the right amount of 'par-lev' according to the day. "
+        description="A Full Stack React app and MongoDB. It utilizes the PrimeReact library for the UI. It Helps organize working cooks with a global prep lists that sets the right amount of 'par-lev' according to the day. "
         liveURL="https://souschef3.herokuapp.com/"
         sourceCodeURL="https://github.com/nickmackenzie/souschef"
         techIcons=""
@@ -236,7 +240,7 @@ export default function App() {
       ></AlternativeReverse>
       <AlternativeProject
         image="/images/trivia.png"
-        description="A multiplayer trivia game with live leader boards. Utilizes Django, Opentdb API and a MySQL database."
+        description="A 'live' multiplayer trivia game with live leader boards. Utilizes Django, OpenTDB API and a MySQL database."
         liveURL="http://trivia-night-django-app.herokuapp.com/"
         sourceCodeURL="https://github.com/nickmackenzie/Trivia-Night"
         techIcons=""
