@@ -128,8 +128,8 @@ export default function ContactMe() {
                     py={2}
                     color={useColorModeValue("gray.700", "gray.400")}
                   >
-                    Full Stack maker & UI / UX Designer , love hip hop music
-                    Author of Building UI.
+                    Full Stack Devloper who loves working with React, CSS3, and
+                    MongoDB.
                   </chakra.p>
 
                   <Flex
