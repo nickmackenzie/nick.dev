@@ -7,6 +7,7 @@ import {
   SimpleGrid,
   Icon,
   Image,
+  Center,
   Link,
   DrawerOverlay,
   Button,
@@ -76,16 +77,17 @@ export default function ContactMe() {
       >
         About Me
       </Button>
-      <Drawer isOpen={isOpen} placement="right" onClose={onClose} size={"md"}>
+      <Drawer
+        isOpen={isOpen}
+        placement="right"
+        onClose={onClose}
+        finalFocusRef={btnRef}
+        size={"sm"}
+      >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerBody background="gray.200">
+          <DrawerBody>
             <Flex alignItems="center">
-              <DrawerCloseButton
-                color="black"
-                background="white"
-                opacity=".7"
-              ></DrawerCloseButton>
               <Box
                 w="sm"
                 bg={useColorModeValue("white", "gray.800")}
@@ -128,8 +130,8 @@ export default function ContactMe() {
                     py={2}
                     color={useColorModeValue("gray.700", "gray.400")}
                   >
-                    Full Stack Devloper who loves working with React, CSS3, and
-                    MongoDB.
+                    Full Stack maker & UI / UX Designer , love hip hop music
+                    Author of Building UI.
                   </chakra.p>
 
                   <Flex
@@ -184,6 +186,11 @@ export default function ContactMe() {
                 </Box>
               </Box>
             </Flex>
+            <Center>
+              <Button m="2" onClick={onClose}>
+                Close
+              </Button>
+            </Center>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
