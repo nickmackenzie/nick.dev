@@ -85,40 +85,27 @@ export default function ContactMe() {
       >
         About Me
       </Button>
-      <Modal open={open} onClose={onCloseModal} center>
-        <Flex alignItems="center">
-          <Box
-            w="sm"
-            bg={useColorModeValue("white", "gray.800")}
-            shadow="2xl"
-            rounded="md"
-            overflow="hidden"
-            position="relative"
-          >
+      <Modal
+        open={open}
+        focusTrapped={false}
+        onClose={onCloseModal}
+        showCloseIcon={false}
+        center
+      >
+        <Flex w="xs" alignItems="center">
+          <Box rounded="md">
             <Image
               w="full"
+              rounded="lg"
               h={56}
               fit="fit"
               objectPosition="center"
               src="/images/headshot.jpg"
               alt="avatar"
             />{" "}
-            <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              {/* <Icon m="2" as={ImHeadphones} h={6} w={6} color="white" />
-                  <Image id="albumArt" src={albumArt} /> */}
-              <chakra.h1
-                mx={3}
-                color="white"
-                fontWeight="bold"
-                fontSize="lg"
-                id="lastPlayed"
-              >
-                {albumSongString}
-              </chakra.h1>
-            </Flex>
             <Box py={4} px={6}>
               <chakra.h1
-                fontSize="xl"
+                fontSize="1rem"
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
@@ -127,10 +114,10 @@ export default function ContactMe() {
 
               <chakra.p
                 py={2}
+                fontSize=".9rem"
                 color={useColorModeValue("gray.700", "gray.400")}
               >
-                Full Stack maker & UI / UX Designer , love hip hop music Author
-                of Building UI.
+                Full Stack maker & UI / UX Designer.
               </chakra.p>
 
               <Flex
