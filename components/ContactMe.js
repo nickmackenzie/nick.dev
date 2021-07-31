@@ -7,6 +7,7 @@ import {
   SimpleGrid,
   Icon,
   Image,
+  Link,
   DrawerOverlay,
   Button,
   Drawer,
@@ -21,8 +22,8 @@ import {
 } from "@chakra-ui/react";
 import { MdHeadset, MdEmail, MdLocationOn } from "react-icons/md";
 import { BsFillBriefcaseFill } from "react-icons/bs";
-import { GrLinkedin } from "react-icons/gr";
-import { DiGithubAlt } from "react-icons/di";
+import { GrLinkedin, GrDocumentPdf } from "react-icons/gr";
+import { DiGithubFull } from "react-icons/di";
 import { ImSpotify, ImHeadphones } from "react-icons/im";
 import axios from "axios";
 export default function ContactMe() {
@@ -99,6 +100,7 @@ export default function ContactMe() {
                   color="white"
                   background="black"
                   onClick={onClose}
+                  opacity="0.8"
                   m="1"
                 ></CloseButton>
                 <Image
@@ -110,8 +112,8 @@ export default function ContactMe() {
                   alt="avatar"
                 />{" "}
                 <Flex alignItems="center" px={6} py={3} bg="gray.900">
-                  <Icon m="2" as={ImHeadphones} h={6} w={6} color="white" />
-                  <Image id="albumArt" src={albumArt} />
+                  {/* <Icon m="2" as={ImHeadphones} h={6} w={6} color="white" />
+                  <Image id="albumArt" src={albumArt} /> */}
                   <chakra.h1
                     mx={3}
                     color="white"
@@ -147,7 +149,13 @@ export default function ContactMe() {
                     <Icon as={GrLinkedin} as={GrLinkedin} h={6} w={6} mr={2} />
 
                     <chakra.h1 px={2} fontSize="sm">
-                      @nick-mackenzie-5061411bb
+                      <Link
+                        target="_blank"
+                        fontSize="1rem"
+                        href="https://www.linkedin.com/in/nick-mackenzie-5061411bb/"
+                      >
+                        @nick-mackenzie
+                      </Link>
                     </chakra.h1>
                   </Flex>
 
@@ -156,32 +164,30 @@ export default function ContactMe() {
                     mt={4}
                     color={useColorModeValue("gray.700", "gray.200")}
                   >
-                    <Icon as={MdLocationOn} h={6} w={6} mr={2} />
-
-                    <chakra.h1 px={2} fontSize="sm">
-                      Ontario,Canada
-                    </chakra.h1>
-                  </Flex>
-                  <Flex
-                    alignItems="center"
-                    mt={4}
-                    color={useColorModeValue("gray.700", "gray.200")}
-                  >
-                    <Icon as={DiGithubAlt} h={6} w={6} mr={2} />
-
-                    <chakra.h1 px={2} fontSize="sm">
+                    <Icon as={DiGithubFull} h={8} w={8} mr={2} />
+                    <Link
+                      target="_blank"
+                      href="https://github.com/nickmackenzie"
+                      fontSize="1rem"
+                    >
                       @nickmackenzie
-                    </chakra.h1>
+                    </Link>
                   </Flex>
                   <Flex
                     alignItems="center"
                     mt={4}
                     color={useColorModeValue("gray.700", "gray.200")}
                   >
-                    <Icon as={DiGithubAlt} h={6} w={6} mr={2} />
+                    <Icon as={GrDocumentPdf} h={6} w={6} mr={2} />
 
                     <chakra.h1 px={2} fontSize="sm">
-                      @resume
+                      <Link
+                        fontSize="1rem"
+                        target="_blank"
+                        href="https://github.com/nickmackenzie/resume/blob/main/pdf/NickMackenzie_Resume.pdf"
+                      >
+                        @resume
+                      </Link>
                     </chakra.h1>
                   </Flex>
                 </Box>
