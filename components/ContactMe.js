@@ -21,17 +21,44 @@ import {
   DrawerFooter,
   CloseButton,
 } from "@chakra-ui/react";
+import Modal from "react-modal";
 import { MdHeadset, MdEmail, MdLocationOn } from "react-icons/md";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { GrLinkedin, GrDocumentPdf } from "react-icons/gr";
 import { DiGithubFull } from "react-icons/di";
 import { ImSpotify, ImHeadphones } from "react-icons/im";
 import axios from "axios";
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
+
 export default function ContactMe() {
   const { isOpen, onOpen, onClose } = useDisclosure(getLastPlayedSong());
   let [albumArt, setAlbumArt] = useState();
   let [albumSongString, getSongDetails] = useState();
   const btnRef = React.useRef();
+  let subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   function getLastPlayedSong() {
     let url = "https://api.spotify.com/v1/me/player/recently-played?limit=1";
 
@@ -66,7 +93,7 @@ export default function ContactMe() {
         as="a"
         ref={btnRef}
         colorScheme="blue"
-        onClick={onOpen}
+        onClick={openModal}
         display="inline-flex"
         alignItems="center"
         justifyContent="center"
@@ -77,123 +104,118 @@ export default function ContactMe() {
       >
         About Me
       </Button>
-      <Drawer
-        isOpen={isOpen}
-        placement="right"
-        onClose={onClose}
-        finalFocusRef={btnRef}
-        size={"sm"}
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
       >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerBody>
-            <Flex alignItems="center">
-              <Box
-                w="sm"
-                bg={useColorModeValue("white", "gray.800")}
-                shadow="2xl"
-                rounded="md"
-                overflow="hidden"
-                position="relative"
-              >
-                <Image
-                  w="full"
-                  h={56}
-                  fit="fit"
-                  objectPosition="center"
-                  src="/images/headshot.jpg"
-                  alt="avatar"
-                />{" "}
-                <Flex alignItems="center" px={6} py={3} bg="gray.900">
-                  {/* <Icon m="2" as={ImHeadphones} h={6} w={6} color="white" />
+        <Flex alignItems="center">
+          <Box
+            w="sm"
+            bg={useColorModeValue("white", "gray.800")}
+            shadow="2xl"
+            rounded="md"
+            overflow="hidden"
+            position="relative"
+          >
+            <Image
+              w="full"
+              h={56}
+              fit="fit"
+              objectPosition="center"
+              src="/images/headshot.jpg"
+              alt="avatar"
+            />{" "}
+            <Flex alignItems="center" px={6} py={3} bg="gray.900">
+              {/* <Icon m="2" as={ImHeadphones} h={6} w={6} color="white" />
                   <Image id="albumArt" src={albumArt} /> */}
-                  <chakra.h1
-                    mx={3}
-                    color="white"
-                    fontWeight="bold"
-                    fontSize="lg"
-                    id="lastPlayed"
-                  >
-                    {albumSongString}
-                  </chakra.h1>
-                </Flex>
-                <Box py={4} px={6}>
-                  <chakra.h1
-                    fontSize="xl"
-                    fontWeight="bold"
-                    color={useColorModeValue("gray.800", "white")}
-                  >
-                    Nick MacKenzie
-                  </chakra.h1>
-
-                  <chakra.p
-                    py={2}
-                    color={useColorModeValue("gray.700", "gray.400")}
-                  >
-                    Full Stack maker & UI / UX Designer , love hip hop music
-                    Author of Building UI.
-                  </chakra.p>
-
-                  <Flex
-                    alignItems="center"
-                    mt={4}
-                    color={useColorModeValue("gray.700", "gray.200")}
-                  >
-                    <Icon as={GrLinkedin} as={GrLinkedin} h={6} w={6} mr={2} />
-
-                    <chakra.h1 px={2} fontSize="sm">
-                      <Link
-                        target="_blank"
-                        fontSize="16px"
-                        href="https://www.linkedin.com/in/nick-mackenzie-5061411bb/"
-                      >
-                        @nick-mackenzie
-                      </Link>
-                    </chakra.h1>
-                  </Flex>
-
-                  <Flex
-                    alignItems="center"
-                    mt={4}
-                    color={useColorModeValue("gray.700", "gray.200")}
-                  >
-                    <Icon as={DiGithubFull} h={8} w={8} mr={2} />
-                    <Link
-                      target="_blank"
-                      href="https://github.com/nickmackenzie"
-                      fontSize="16px"
-                    >
-                      @nickmackenzie
-                    </Link>
-                  </Flex>
-                  <Flex
-                    alignItems="center"
-                    mt={4}
-                    color={useColorModeValue("gray.700", "gray.200")}
-                  >
-                    <Icon as={GrDocumentPdf} h={6} w={6} mr={2} />
-
-                    <chakra.h1 px={2} fontSize="sm">
-                      <Link
-                        fontSize="16px"
-                        target="_blank"
-                        href="https://github.com/nickmackenzie/resume/blob/main/pdf/NickMackenzie_Resume.pdf"
-                      >
-                        @resume
-                      </Link>
-                    </chakra.h1>
-                  </Flex>
-                </Box>
-              </Box>
+              <chakra.h1
+                mx={3}
+                color="white"
+                fontWeight="bold"
+                fontSize="lg"
+                id="lastPlayed"
+              >
+                {albumSongString}
+              </chakra.h1>
             </Flex>
-            <Center>
-              <Button m="2" onClick={onClose}>
-                Close
-              </Button>
-            </Center>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
+            <Box py={4} px={6}>
+              <chakra.h1
+                fontSize="xl"
+                fontWeight="bold"
+                color={useColorModeValue("gray.800", "white")}
+              >
+                Nick MacKenzie
+              </chakra.h1>
+
+              <chakra.p
+                py={2}
+                color={useColorModeValue("gray.700", "gray.400")}
+              >
+                Full Stack maker & UI / UX Designer , love hip hop music Author
+                of Building UI.
+              </chakra.p>
+
+              <Flex
+                alignItems="center"
+                mt={4}
+                color={useColorModeValue("gray.700", "gray.200")}
+              >
+                <Icon as={GrLinkedin} as={GrLinkedin} h={6} w={6} mr={2} />
+
+                <chakra.h1 px={2} fontSize="sm">
+                  <Link
+                    target="_blank"
+                    fontSize="16px"
+                    href="https://www.linkedin.com/in/nick-mackenzie-5061411bb/"
+                  >
+                    @nick-mackenzie
+                  </Link>
+                </chakra.h1>
+              </Flex>
+
+              <Flex
+                alignItems="center"
+                mt={4}
+                color={useColorModeValue("gray.700", "gray.200")}
+              >
+                <Icon as={DiGithubFull} h={8} w={8} mr={2} />
+                <Link
+                  target="_blank"
+                  href="https://github.com/nickmackenzie"
+                  fontSize="16px"
+                >
+                  @nickmackenzie
+                </Link>
+              </Flex>
+              <Flex
+                alignItems="center"
+                mt={4}
+                color={useColorModeValue("gray.700", "gray.200")}
+              >
+                <Icon as={GrDocumentPdf} h={6} w={6} mr={2} />
+
+                <chakra.h1 px={2} fontSize="sm">
+                  <Link
+                    fontSize="16px"
+                    target="_blank"
+                    href="https://github.com/nickmackenzie/resume/blob/main/pdf/NickMackenzie_Resume.pdf"
+                  >
+                    @resume
+                  </Link>
+                </chakra.h1>
+              </Flex>
+            </Box>
+          </Box>
+        </Flex>
+        <Center>
+          <Button m="2" onClick={closeModal}>
+            Close
+          </Button>
+        </Center>
+      </Modal>
     </>
   );
 }

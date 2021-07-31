@@ -23,8 +23,10 @@ export default function Home() {
         objectFit="contain"
         objectPosition="center"
       ></Image> */}
-
-      <LandingText></LandingText>
+      <div>
+        {" "}
+        <LandingText></LandingText>
+      </div>
     </div>
   );
 }

@@ -51,12 +51,7 @@ export default function App() {
 
   return (
     <>
-      <Box
-        px={8}
-        py={24}
-        mx="auto"
-        backgroundImage="linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%)"
-      >
+      <Box px={8} py={24} mx="auto">
         <Box
           w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
           mx="auto"
