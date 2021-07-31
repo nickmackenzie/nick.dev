@@ -76,17 +76,16 @@ export default function ContactMe() {
       >
         About Me
       </Button>
-      <Drawer
-        isOpen={isOpen}
-        placement="right"
-        onClose={onClose}
-        finalFocusRef={btnRef}
-        size={"sm"}
-      >
+      <Drawer isOpen={isOpen} placement="right" onClose={onClose} size={"md"}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerBody>
+          <DrawerBody background="gray.200">
             <Flex alignItems="center">
+              <DrawerCloseButton
+                color="black"
+                background="white"
+                opacity=".7"
+              ></DrawerCloseButton>
               <Box
                 w="sm"
                 bg={useColorModeValue("white", "gray.800")}
@@ -95,15 +94,6 @@ export default function ContactMe() {
                 overflow="hidden"
                 position="relative"
               >
-                <CloseButton
-                  position="absolute"
-                  color="black"
-                  onClick={onClose}
-                  background="white"
-                  opacity="0.8"
-                  size="20px"
-                  m="1"
-                ></CloseButton>
                 <Image
                   w="full"
                   h={56}
