@@ -99,8 +99,9 @@ export default function ContactMe() {
                   position="absolute"
                   color="black"
                   onClick={onClose}
+                  background="white"
                   opacity="0.8"
-                  size="2rem"
+                  size="20px"
                   m="1"
                 ></CloseButton>
                 <Image
@@ -151,7 +152,7 @@ export default function ContactMe() {
                     <chakra.h1 px={2} fontSize="sm">
                       <Link
                         target="_blank"
-                        fontSize="1rem"
+                        fontSize="16px"
                         href="https://www.linkedin.com/in/nick-mackenzie-5061411bb/"
                       >
                         @nick-mackenzie
@@ -168,7 +169,7 @@ export default function ContactMe() {
                     <Link
                       target="_blank"
                       href="https://github.com/nickmackenzie"
-                      fontSize="1rem"
+                      fontSize="16px"
                     >
                       @nickmackenzie
                     </Link>
@@ -182,7 +183,7 @@ export default function ContactMe() {
 
                     <chakra.h1 px={2} fontSize="sm">
                       <Link
-                        fontSize="1rem"
+                        fontSize="16px"
                         target="_blank"
                         href="https://github.com/nickmackenzie/resume/blob/main/pdf/NickMackenzie_Resume.pdf"
                       >
