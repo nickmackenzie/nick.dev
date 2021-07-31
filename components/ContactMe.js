@@ -21,7 +21,8 @@ import {
   DrawerFooter,
   CloseButton,
 } from "@chakra-ui/react";
-import Modal from "react-modal";
+import "react-responsive-modal/styles.css";
+import { Modal } from "react-responsive-modal";
 import { MdHeadset, MdEmail, MdLocationOn } from "react-icons/md";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { GrLinkedin, GrDocumentPdf } from "react-icons/gr";
@@ -29,35 +30,15 @@ import { DiGithubFull } from "react-icons/di";
 import { ImSpotify, ImHeadphones } from "react-icons/im";
 import axios from "axios";
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
-
 export default function ContactMe() {
   const { isOpen, onOpen, onClose } = useDisclosure(getLastPlayedSong());
   let [albumArt, setAlbumArt] = useState();
   let [albumSongString, getSongDetails] = useState();
   const btnRef = React.useRef();
-  let subtitle;
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-  function openModal() {
-    setIsOpen(true);
-  }
+  const [open, setOpen] = useState(false);
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
 
   function getLastPlayedSong() {
     let url = "https://api.spotify.com/v1/me/player/recently-played?limit=1";
@@ -93,7 +74,7 @@ export default function ContactMe() {
         as="a"
         ref={btnRef}
         colorScheme="blue"
-        onClick={openModal}
+        onClick={onOpenModal}
         display="inline-flex"
         alignItems="center"
         justifyContent="center"
@@ -104,13 +85,7 @@ export default function ContactMe() {
       >
         About Me
       </Button>
-      <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
+      <Modal open={open} onClose={onCloseModal} center>
         <Flex alignItems="center">
           <Box
             w="sm"
@@ -207,14 +182,14 @@ export default function ContactMe() {
                   </Link>
                 </chakra.h1>
               </Flex>
+              <Center>
+                <Button colorScheme={"blue"} m="2" onClick={onCloseModal}>
+                  Close
+                </Button>
+              </Center>
             </Box>
           </Box>
         </Flex>
-        <Center>
-          <Button m="2" onClick={closeModal}>
-            Close
-          </Button>
-        </Center>
       </Modal>
     </>
   );
