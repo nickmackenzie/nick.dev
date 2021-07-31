@@ -65,7 +65,6 @@ export default function App() {
             letterSpacing={{ base: "normal", md: "tight" }}
             color={useColorModeValue("gray.900", "gray.100")}
           >
-            Hello, I'm{" "}
             <Text
               display={{ base: "block", lg: "inline" }}
               w="full"
@@ -81,14 +80,14 @@ export default function App() {
               w="full"
               bgClip="text"
               color="gray.600"
-              fontSize="3rem"
+              fontSize="2.6rem"
             >
               Web Developer
             </Text>
           </chakra.h1>
           <chakra.h4
             mb={6}
-            fontSize={{ base: "2xl", md: "4xl" }}
+            fontSize="2.2rem"
             fontWeight="bold"
             lineHeight="none"
             letterSpacing={{ base: "normal", md: "tight" }}
@@ -118,30 +117,46 @@ export default function App() {
               <DevIcon
                 width={iconSize}
                 icon="html5"
-                style={devIconStyle.html}
+                color={useColorModeValue("gray.900", "gray.100")}
               />
               <DevIcon
                 width={iconSize}
                 icon="javascript"
                 logoStyle="original"
                 color="white"
-                style={devIconStyle.js}
+                color={useColorModeValue("gray.900", "gray.100")}
               />
 
               <DevIcon
-                style={devIconStyle.react}
+                color={useColorModeValue("gray.900", "gray.100")}
                 width={iconSize}
                 icon="react"
               />
-              <DevIcon width={iconSize} icon="css3" />
-              <DevIcon width={iconSize} icon="sass" />
-              <DevIcon width={iconSize} icon="npm" />
+              <DevIcon
+                width={iconSize}
+                icon="css3"
+                color={useColorModeValue("gray.900", "gray.100")}
+              />
+              <DevIcon
+                width={iconSize}
+                icon="sass"
+                color={useColorModeValue("gray.900", "gray.100")}
+              />
+              <DevIcon
+                width={iconSize}
+                icon="npm"
+                color={useColorModeValue("gray.900", "gray.100")}
+              />
               <DevIcon
                 width={iconSize}
                 icon="visualstudio"
-                style={devIconStyle.vscode}
+                color={useColorModeValue("gray.900", "gray.100")}
               />
-              <DevIcon width={iconSize} icon="git" />
+              <DevIcon
+                width={iconSize}
+                icon="git"
+                color={useColorModeValue("gray.900", "gray.100")}
+              />
             </Flex>
           </chakra.h4>
 
@@ -230,11 +245,11 @@ export default function App() {
       ></AlternativeProject>
       <AlternativeReverse
         image="images/codesave.png"
-        description="A hangman game made with pure JavaScript, HTML and CSS."
-        liveURL="https://nickmackenzie.github.io/hangman/"
-        sourceCodeURL="https://github.com/nickmackenzie/hangman"
+        description="A NodeJs App using Google Authentication. It allows users to save their code 'snippets' to a cloud database. Supports over 15+ languages with automatic syntax highlighting."
+        liveURL="https://code-save.herokuapp.com/"
+        sourceCodeURL="https://github.com/nickmackenzie/code-save/"
         techIcons=""
-        stack="NodeJS | ExpressJS | MongoDB | Google People API"
+        stack="NodeJS | ExpressJS | MongoDB | Google Authentication API | EJS Templates"
         name="CodeSave"
       ></AlternativeReverse>
     </>

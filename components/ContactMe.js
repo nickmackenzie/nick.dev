@@ -97,10 +97,10 @@ export default function ContactMe() {
               >
                 <CloseButton
                   position="absolute"
-                  color="white"
-                  background="black"
+                  color="black"
                   onClick={onClose}
                   opacity="0.8"
+                  size="2rem"
                   m="1"
                 ></CloseButton>
                 <Image
