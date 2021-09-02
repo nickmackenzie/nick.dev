@@ -1,34 +1,18 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import {
   chakra,
   Box,
   useColorModeValue,
   Button,
   Stack,
-  Image,
   Text,
   Icon,
-  Link,
   Flex,
-  Center,
 } from "@chakra-ui/react";
 import DevIcon from "devicon-react-svg";
-import { Img } from "@chakra-ui/react";
-import { GoLogoGithub } from "react-icons/go";
-import { GrLinkedin, GrDocumentPdf } from "react-icons/gr";
-import { TiHtml5 } from "react-icons/ti";
-import {
-  SiCss3,
-  SiReact,
-  SiVisualstudiocode,
-  SiGit,
-  SiJavascript,
-} from "react-icons/si";
-import { FaSass } from "react-icons";
 import AlternativeProject from "../components/AlternativeProject";
 import AlternativeReverse from "../components/AlternativeReverse";
 import ContactMe from "../components/ContactMe";
-import ModalAbout from "../components/ModalAbout";
 let iconSize = "6rem";
 const devIconStyle = {
   react: { fill: "gray" },
@@ -111,7 +95,7 @@ export default function App() {
               bgGradient="linear(to-r, blue.400,teal.500)"
               fontWeight="extrabold"
             >
-              making things.
+              solving problems.
             </Text>
             <Flex justifyContent="center" marginTop="2rem">
               <DevIcon
@@ -205,7 +189,7 @@ export default function App() {
       </Box>{" "}
       <Box ref={myRef}></Box> {/**For the project anchor link */}
       <AlternativeReverse
-        image="/images/namematch.png"
+        image="/images/gifs/namematch.gif"
         description="A Full Stack App using MongoDB for the database and ReactJS with
             ChakaraUI as a front-end. This app allows users to 'like' or 'dislike' name suggestions and match with your partner."
         liveURL="http://name-match.herokuapp.com/"

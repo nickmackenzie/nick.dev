@@ -4,30 +4,17 @@ import {
   Box,
   useColorModeValue,
   Flex,
-  SimpleGrid,
   Icon,
   Image,
   Center,
   Link,
-  DrawerOverlay,
   Button,
-  Drawer,
-  DrawerBody,
-  DrawerHeader,
   useDisclosure,
-  DrawerContent,
-  DrawerCloseButton,
-  Input,
-  DrawerFooter,
-  CloseButton,
 } from "@chakra-ui/react";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
-import { MdHeadset, MdEmail, MdLocationOn } from "react-icons/md";
-import { BsFillBriefcaseFill } from "react-icons/bs";
 import { GrLinkedin, GrDocumentPdf } from "react-icons/gr";
 import { DiGithubFull } from "react-icons/di";
-import { ImSpotify, ImHeadphones } from "react-icons/im";
 import axios from "axios";
 
 export default function ContactMe() {
@@ -56,8 +43,8 @@ export default function ContactMe() {
         setAlbumArt(response.data.items[0].track.album.images[2].url);
         getSongDetails(
           response.data.items[0].track.artists[0].name +
-            " - " +
-            response.data.items[0].track.album.name
+          " - " +
+          response.data.items[0].track.album.name
         );
         console.log(response.data.items[0].track.album.name);
         console.log(response.data.items[0].track.album.images[2].url);
@@ -95,13 +82,11 @@ export default function ContactMe() {
         <Flex w="xs" alignItems="center">
           <Box rounded="md">
             <Image
-              w="full"
               rounded="lg"
-              h={56}
               fit="fit"
-              objectPosition="center"
               src="/images/headshot.jpg"
               alt="avatar"
+              priority={true}
             />{" "}
             <Box py={4} px={6}>
               <chakra.h1

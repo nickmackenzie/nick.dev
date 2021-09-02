@@ -105,8 +105,7 @@ export default function ModalAbout() {
                       fontSize="lg"
                       color={useColorModeValue("gray.700", "gray.400")}
                     >
-                      Full Stack maker & UI / UX Designer , love hip hop music
-                      Author of Building UI.
+                      Full Stack Developer who loves React and all things JavaScript.
                     </chakra.p>
 
                     <Flex
