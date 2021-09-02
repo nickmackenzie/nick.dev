@@ -32,7 +32,7 @@ export default function Project(props) {
         <Center flexDir="column">
           <Box
             w="50%"
-            class="about-text"
+            className="about-text"
             fontSize="1.4rem"
             textAlign="center"
             mb={6}

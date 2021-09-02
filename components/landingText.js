@@ -150,9 +150,9 @@ export default function App() {
             fontSize={{ base: "lg", md: "xl" }}
             color={useColorModeValue("gray.600", "gray.300")}
           >
-            <div class="wrapper">
-              <div class="hero-image">
-                <div class="hero-text"></div>
+            <div className="wrapper">
+              <div className="hero-image">
+                <div className="hero-text"></div>
               </div>
             </div>
           </chakra.p>

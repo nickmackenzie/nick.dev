@@ -21,13 +21,13 @@ export default function Home() {
         />
       </Head>
 
-      <div class="wrapper">
-        <div class="hero-image">
+      <div className="wrapper">
+        <div className="hero-image">
           <Nav></Nav>
           <main className={card.container}>
-            <div class="card-list keen-slider" ref={sliderRef} id="projectCard">
-              <article class="keen-slider__slide card ">
-                <figure class="card-image">
+            <div className="card-list keen-slider" ref={sliderRef} id="projectCard">
+              <article className="keen-slider__slide card ">
+                <figure className="card-image">
                   <Image
                     src="https://i.imgur.com/edke0g8.png"
                     alt="Logo for A Full Stack App using MongoDB as a backend and ReactJS with
@@ -37,9 +37,9 @@ export default function Home() {
                     height={"300px"}
                   />
                 </figure>
-                <div class="card-footer">
+                <div className="card-footer">
                   <div className="techStack">
-                    <div class="card-meta card-meta--views">
+                    <div className="card-meta card-meta--views">
                       <svg viewBox="0 0 128 128">
                         <g fill="#61DAFB">
                           <circle cx="64" cy="47.5" r="9.3"></circle>
@@ -48,7 +48,7 @@ export default function Home() {
                       </svg>
                     </div>
 
-                    <div class="card-meta card-meta--date">
+                    <div className="card-meta card-meta--date">
                       <svg viewBox="0 0 128 128">
                         <path
                           fill-rule="evenodd"
@@ -58,7 +58,7 @@ export default function Home() {
                         ></path>
                       </svg>
                     </div>
-                    <div class="card-meta card-meta--date">
+                    <div className="card-meta card-meta--date">
                       <svg viewBox="0 0 128 128">
                         <path
                           fill="#83CD29"
@@ -87,7 +87,7 @@ export default function Home() {
                       </svg>
                     </div>
 
-                    <div class="card-meta card-meta--date">
+                    <div className="card-meta card-meta--date">
                       <svg viewBox="0 0 128 128">
                         <defs>
                           <linearGradient
@@ -115,7 +115,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div class="card-header">
+                <div className="card-header">
                   <p>
                     A Full Stack App using MongoDB as a backend and ReactJS with
                     TailwindCSS as a front-end.It will match a list of baby
@@ -126,8 +126,8 @@ export default function Home() {
                 </div>
               </article>
 
-              <article class="keen-slider__slide card ">
-                <figure class="card-image">
+              <article className="keen-slider__slide card ">
+                <figure className="card-image">
                   <img
                     src="https://i.imgur.com/edke0g8.png"
                     alt="Logo for A Full Stack App using MongoDB as a backend and ReactJS with
@@ -137,9 +137,9 @@ export default function Home() {
                     height={"300px"}
                   />
                 </figure>
-                <div class="card-footer">
+                <div className="card-footer">
                   <div className="techStack">
-                    <div class="card-meta card-meta--views">
+                    <div className="card-meta card-meta--views">
                       <svg viewBox="0 0 128 128">
                         <g fill="#61DAFB">
                           <circle cx="64" cy="47.5" r="9.3"></circle>
@@ -148,7 +148,7 @@ export default function Home() {
                       </svg>
                     </div>
 
-                    <div class="card-meta card-meta--date">
+                    <div className="card-meta card-meta--date">
                       <svg viewBox="0 0 128 128">
                         <path
                           fill-rule="evenodd"
@@ -158,7 +158,7 @@ export default function Home() {
                         ></path>
                       </svg>
                     </div>
-                    <div class="card-meta card-meta--date">
+                    <div className="card-meta card-meta--date">
                       <svg viewBox="0 0 128 128">
                         <path
                           fill="#83CD29"
@@ -187,7 +187,7 @@ export default function Home() {
                       </svg>
                     </div>
 
-                    <div class="card-meta card-meta--date">
+                    <div className="card-meta card-meta--date">
                       <svg viewBox="0 0 128 128">
                         <defs>
                           <linearGradient
@@ -215,7 +215,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div class="card-header">
+                <div className="card-header">
                   <p>
                     A Full Stack App using MongoDB as a backend and ReactJS with
                     TailwindCSS as a front-end.It will match a list of baby

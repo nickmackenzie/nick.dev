@@ -15,46 +15,14 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { GrLinkedin, GrDocumentPdf } from "react-icons/gr";
 import { DiGithubFull } from "react-icons/di";
-import axios from "axios";
 
 export default function ContactMe() {
-  const { isOpen, onOpen, onClose } = useDisclosure(getLastPlayedSong());
-  let [albumArt, setAlbumArt] = useState();
-  let [albumSongString, getSongDetails] = useState();
   const btnRef = React.useRef();
   const [open, setOpen] = useState(false);
 
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
 
-  function getLastPlayedSong() {
-    let url = "https://api.spotify.com/v1/me/player/recently-played?limit=1";
-
-    const headers = {
-      "Content-Type": "application/json",
-      Authorization: "Bearer ",
-    };
-
-    axios
-      .get(url, {
-        headers: headers,
-      })
-      .then((response) => {
-        setAlbumArt(response.data.items[0].track.album.images[2].url);
-        getSongDetails(
-          response.data.items[0].track.artists[0].name +
-          " - " +
-          response.data.items[0].track.album.name
-        );
-        console.log(response.data.items[0].track.album.name);
-        console.log(response.data.items[0].track.album.images[2].url);
-        console.log(response.data.items[0].track.artists[0].name);
-        console.log(response.data.items[0].played_at);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
   return (
     <>
       <Button

@@ -20,7 +20,7 @@ export default function AlternativeProject(props) {
         <Box maxWidth="60rem" marginTop="2rem">
           <Image
             src={props.image}
-            alt="3 women looking at a laptop"
+
             w="auto"
             h="auto"
             rounded="md"

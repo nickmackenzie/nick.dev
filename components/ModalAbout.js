@@ -40,12 +40,12 @@ export default function ModalAbout() {
           top="0"
           overflow="auto"
           id="myModal"
-          class="modal"
+          className="modal"
         >
-          <Box margin="0 auto" height="50%" class="modal-content">
+          <Box margin="0 auto" height="50%" className="modal-content">
             <span
               float="right"
-              class="close"
+              className="close"
               _hover={{
                 color: "black",
                 textDecoration: "none",
