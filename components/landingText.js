@@ -189,7 +189,7 @@ export default function App() {
       </Box>{" "}
       <Box ref={myRef}></Box> {/**For the project anchor link */}
       <AlternativeReverse
-        image="/images/gifs/namematch.gif"
+        image="/images/namematch.png"
         description="A Full Stack App using MongoDB for the database and ReactJS with
             ChakaraUI as a front-end. This app allows users to 'like' or 'dislike' name suggestions and match with your partner."
         liveURL="http://name-match.herokuapp.com/"
