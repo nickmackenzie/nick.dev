@@ -12,7 +12,6 @@ export default function Home() {
 
       />
       <Head>
-        <title></title>
         <meta name="description" content="Nick MacKenzie Portfolios" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
