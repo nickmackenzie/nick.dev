@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import {
   chakra,
   Box,
@@ -30,22 +30,12 @@ const useScroll = () => {
   return [executeScroll, myRef];
 };
 
-
-
 export default function App() {
   const [executeScroll, myRef] = useScroll();
-  const [displayProjects, toggleProjectDisplay] = useState(false)
-  const [animationDone, toggleAnimation] = useState(false)
-  const showProjects = () => {
-
-    animationDone ? toggleProjectDisplay(false) : toggleProjectDisplay(true)
-    setTimeout(function () { animationDone ? toggleAnimation(false) : toggleAnimation(true) }, 650);
-  }
-
 
   return (
     <>
-      <Box px={8} py={24} mx="auto" className='hero'>
+      <Box px={8} py={24} mx="auto">
         <Box
           w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
           mx="auto"
@@ -74,91 +64,86 @@ export default function App() {
               w="full"
               bgClip="text"
               bgGradient="linear(to-r, gray.600,gray.800)"
-
               fontSize="2.6rem"
             >
-              {animationDone ? "Projects" : "Web Developer"}
+              Web Developer
             </Text>
           </chakra.h1>
-          <Box className={animationDone ? "animationDone" : "none"}>
-            <chakra.h4
-              mb={6}
-              fontSize="2.2rem"
-              fontWeight="bold"
-              lineHeight="none"
-              className={displayProjects ? "fade-out-bck" : "fade-in-fwd"}
-              letterSpacing={{ base: "normal", md: "tight" }}
-              color="gray.900"
-            // display={{ base: displayProjects ? "none" : "block", lg: displayProjects ? "none" : "block" }}
-
+          <chakra.h4
+            mb={6}
+            fontSize="2.2rem"
+            fontWeight="bold"
+            lineHeight="none"
+            letterSpacing={{ base: "normal", md: "tight" }}
+            color="gray.900"
+          >
+            I like working with{" "}
+            <Text
+              display={{ base: "block", lg: "inline" }}
+              w="full"
+              bgClip="text"
+              bgGradient="linear(to-r, blue.400,teal.500)"
+              fontWeight="extrabold"
             >
-              I like working with{" "}
-              <Text
-                //   display={{ base: displayProjects ? "none" : "block", lg: displayProjects ? "none" : "block" }}
-                w="full"
-                bgClip="text"
-                bgGradient="linear(to-r, blue.400,teal.500)"
-                fontWeight="extrabold"
-              >
-                computers&nbsp;
-              </Text>
-              and<br></br>
-              <Text
-                display={{ base: "block", lg: "inline" }}
-                w="full"
-                bgClip="text"
-                bgGradient="linear(to-r, blue.400,teal.500)"
-                fontWeight="extrabold"
-              >
-                solving problems.
-              </Text>
-              <Flex justifyContent="center" marginTop="2rem">
-                <DevIcon
-                  width={iconSize}
-                  icon="html5"
-                  color={useColorModeValue("gray.900", "gray.100")}
-                />
-                <DevIcon
-                  width={iconSize}
-                  icon="javascript"
-                  logoStyle="original"
-                  color="white"
-                  color={useColorModeValue("gray.900", "gray.100")}
-                />
+              computers&nbsp;
+            </Text>
+            and<br></br>
+            <Text
+              display={{ base: "block", lg: "inline" }}
+              w="full"
+              bgClip="text"
+              bgGradient="linear(to-r, blue.400,teal.500)"
+              fontWeight="extrabold"
+            >
+              solving problems.
+            </Text>
+            <Flex justifyContent="center" marginTop="2rem">
+              <DevIcon
+                width={iconSize}
+                icon="html5"
+                color={useColorModeValue("gray.900", "gray.100")}
+              />
+              <DevIcon
+                width={iconSize}
+                icon="javascript"
+                logoStyle="original"
+                color="white"
+                color={useColorModeValue("gray.900", "gray.100")}
+              />
 
-                <DevIcon
-                  color={useColorModeValue("gray.900", "gray.100")}
-                  width={iconSize}
-                  icon="react"
-                />
-                <DevIcon
-                  width={iconSize}
-                  icon="css3"
-                  color={useColorModeValue("gray.900", "gray.100")}
-                />
-                <DevIcon
-                  width={iconSize}
-                  icon="sass"
-                  color={useColorModeValue("gray.900", "gray.100")}
-                />
-                <DevIcon
-                  width={iconSize}
-                  icon="npm"
-                  color={useColorModeValue("gray.900", "gray.100")}
-                />
-                <DevIcon
-                  width={iconSize}
-                  icon="visualstudio"
-                  color={useColorModeValue("gray.900", "gray.100")}
-                />
-                <DevIcon
-                  width={iconSize}
-                  icon="git"
-                  color={useColorModeValue("gray.900", "gray.100")}
-                />
-              </Flex>
-            </chakra.h4>
-          </Box>
+              <DevIcon
+                color={useColorModeValue("gray.900", "gray.100")}
+                width={iconSize}
+                icon="react"
+              />
+              <DevIcon
+                width={iconSize}
+                icon="css3"
+                color={useColorModeValue("gray.900", "gray.100")}
+              />
+              <DevIcon
+                width={iconSize}
+                icon="sass"
+                color={useColorModeValue("gray.900", "gray.100")}
+              />
+              <DevIcon
+                width={iconSize}
+                icon="npm"
+                color={useColorModeValue("gray.900", "gray.100")}
+              />
+              <DevIcon
+                width={iconSize}
+                icon="visualstudio"
+                color={useColorModeValue("gray.900", "gray.100")}
+              />
+              <DevIcon
+                width={iconSize}
+                icon="git"
+                color={useColorModeValue("gray.900", "gray.100")}
+              />
+            </Flex>
+          </chakra.h4>
+
           <chakra.p
             px={{ base: 0, lg: 24 }}
             mb={6}
@@ -183,14 +168,13 @@ export default function App() {
               display="inline-flex"
               alignItems="center"
               justifyContent="center"
-              className="projectButton"
               w={{ base: "full", sm: "auto" }}
               mb={{ base: 2, sm: 0 }}
               size="lg"
               m="1"
-              onClick={showProjects}
+              onClick={executeScroll}
             >
-              {animationDone ? "Hide Projects" : "Show Projects"}
+              Projects
               <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
                 <path
                   fillRule="evenodd"
@@ -203,14 +187,54 @@ export default function App() {
           </Stack>
         </Box>
       </Box>{" "}
-      {/* <Box ref={myRef}></Box> *For the project anchor link */}
-
-
-      { }
-
-
-      {animationDone ? <AlternativeProject></AlternativeProject> : ""}
-
+      <Box ref={myRef}></Box> {/**For the project anchor link */}
+      <AlternativeReverse
+        image="/images/namematch.png"
+        description="A Full Stack App using MongoDB for the database and ReactJS with
+            ChakaraUI as a front-end. This app allows users to 'like' or 'dislike' name suggestions and match with your partner."
+        liveURL="http://name-match.herokuapp.com/"
+        sourceCodeURL="https://github.com/nickmackenzie/namematch"
+        techIcons=""
+        stack="ReactJS | NodeJS | Mongo-DB"
+        name="NameMatch"
+        altText=""
+      ></AlternativeReverse>
+      <AlternativeProject
+        image="/images/souschef.png"
+        description="A Full Stack React app and MongoDB. It utilizes the PrimeReact library for the UI. It Helps organize working cooks with a global prep lists that sets the right amount of 'par-lev' according to the day. "
+        liveURL="https://souschef3.herokuapp.com/"
+        sourceCodeURL="https://github.com/nickmackenzie/souschef"
+        techIcons=""
+        stack="ReactJS | Mongo-DB | NodeJs | JWT-Authentication"
+        name="SousChef"
+      ></AlternativeProject>
+      <AlternativeReverse
+        image="images/hangman.png"
+        description="A hangman game made with pure JavaScript, HTML and CSS."
+        liveURL="https://nickmackenzie.github.io/hangman/"
+        sourceCodeURL="https://github.com/nickmackenzie/hangman"
+        techIcons=""
+        stack="HTML | CSS | JavaScript"
+        name="Don't Fall Off The Water Fall!"
+      ></AlternativeReverse>
+      <AlternativeProject
+        image="/images/trivia.png"
+        description="A 'live' multiplayer trivia game with live leader boards. Utilizes Django, OpenTDB API and a MySQL database."
+        liveURL="http://trivia-night-django-app.herokuapp.com/"
+        sourceCodeURL="https://github.com/nickmackenzie/Trivia-Night"
+        techIcons=""
+        stack="Django | Python | MySQL | JavaScript"
+        name="Trivia Night"
+      ></AlternativeProject>
+      <AlternativeReverse
+        image="images/codesave.png"
+        description="A NodeJs App using Google Authentication. It allows users to save their code 'snippets' to a cloud database. Supports over 15+ languages with automatic syntax highlighting."
+        liveURL="https://code-save.herokuapp.com/"
+        sourceCodeURL="https://github.com/nickmackenzie/code-save/"
+        techIcons=""
+        stack="NodeJS | ExpressJS | MongoDB | Google Authentication API | EJS Templates"
+        name="CodeSave"
+      ></AlternativeReverse>
     </>
   );
 }
