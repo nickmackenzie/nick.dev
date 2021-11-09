@@ -55,6 +55,7 @@ export default function ContactMe() {
               src="/images/headshot.jpg"
               alt="avatar"
               priority={true}
+              loading='eager'
             />{" "}
             <Box py={4} px={6}>
               <chakra.h1
