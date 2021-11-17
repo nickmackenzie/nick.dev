@@ -1,7 +1,10 @@
 import Head from "next/head";
 import { NextSeo } from 'next-seo';
 import LandingText from "../components/landingText";
+import { ColorModeScript } from "@chakra-ui/react"
+
 import AlternativeProject from "../components/AlternativeProject";
+import theme from "./theme"
 let projects = {
   nameMatch: {
     image: "/images/namematch.png",
@@ -50,8 +53,10 @@ let projects = {
 }
 
 export default function Home() {
+
   return (
     <div>
+
       <NextSeo
         title="Nick MacKenzie - Full Stack Web Developer. Ontario, Canada"
         description="Full Stack Web Developer"
