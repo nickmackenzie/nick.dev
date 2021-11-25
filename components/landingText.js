@@ -35,7 +35,7 @@ export default function App() {
   const [executeScroll, myRef] = useScroll();
 
   useEffect(() => {
-    axios.post('/api/posts')
+    axios.post('/api/visitors')
       .then(function (response) {
         console.log(response);
       })
