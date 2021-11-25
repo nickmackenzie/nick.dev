@@ -18,7 +18,8 @@ export default async function visitor(req, res) {
                     res.json({ status: 200, data: newVisitor });
                 })
                 .catch(function (error) {
-                    console.log(error);
+                    res.json({ status: 200, data: error });
+
 
                 });
             break;
