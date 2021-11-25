@@ -1,7 +1,8 @@
+
 import Head from "next/head";
 import { NextSeo } from 'next-seo';
 import LandingText from "../components/landingText";
-
+import axios from 'axios'
 
 let projects = {
   nameMatch: {
