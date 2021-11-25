@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
+import axios from 'axios'
 import {
   chakra,
   Box,
@@ -33,9 +34,19 @@ const useScroll = () => {
 export default function App() {
   const [executeScroll, myRef] = useScroll();
 
+  useEffect(() => {
+    axios.post('/api/posts')
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, [])
+
   return (
     <>
-      <Box px={8} py={24} mx="auto">
+      <Box px={8} py={24} className='hero' mx="auto">
         <Box
           w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
           mx="auto"
