@@ -33,15 +33,23 @@ const useScroll = () => {
 
 export default function App() {
   const [executeScroll, myRef] = useScroll();
+  const getData = async () => {
+    let res = await axios.post('http://ip-api.com/json/')
+    console.log(res.data);
 
-  useEffect(() => {
-    axios.post('/api/visitors')
+    axios.post('/api/visitors', { visitorData: res.data })
       .then(function (response) {
         console.log(response);
       })
       .catch(function (error) {
         console.log(error);
       });
+  }
+  useEffect(() => {
+    getData()
+
+
+
   }, [])
 
   return (

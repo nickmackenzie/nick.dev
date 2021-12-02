@@ -5,23 +5,32 @@ import { format } from 'date-fns'
 export default async function visitor(req, res) {
     const client = await clientPromise;
     const db = client.db("portfolio");
+
     switch (req.method) {
         case "POST":
-            axios.post(`https://ipinfo.io?token=${process.env.VISITORAPI}`)
-                .then(async function (response) {
-                    let currentDate = format(new Date(), 'MMMM/dd/yyyy')
-                    let currentTime = format(new Date(), 'h:mmbbbb')
-                    let visitorObject = response.data
-                    visitorObject.currentDate = currentDate;
-                    visitorObject.currentTime = currentTime;
-                    let newVisitor = await db.collection("visitors").insertOne(visitorObject);
-                    res.json({ status: 200, data: newVisitor });
-                })
-                .catch(function (error) {
-                    res.json({ status: 200, data: error });
+            console.log(req.body.visitorData)
+            let currentDate = format(new Date(), 'MMMM/dd/yyyy')
+            let currentTime = format(new Date(), 'h:mmbbbb')
+            let visitorObject = req.body.visitorData
+            visitorObject.currentDate = currentDate;
+            visitorObject.currentTime = currentTime;
+            let newVisitor = await db.collection("visitors").insertOne(visitorObject);
+            res.json({ status: 200, data: newVisitor });
+            // axios.post(`https://ipinfo.io?token=${process.env.VISITORAPI}`)
+            //     .then(async function (response) {
+            //         let currentDate = format(new Date(), 'MMMM/dd/yyyy')
+            //         let currentTime = format(new Date(), 'h:mmbbbb')
+            //         let visitorObject = response.data
+            //         visitorObject.currentDate = currentDate;
+            //         visitorObject.currentTime = currentTime;
+            //         let newVisitor = await db.collection("visitors").insertOne(visitorObject);
+            //         res.json({ status: 200, data: newVisitor });
+            //     })
+            //     .catch(function (error) {
+            //         res.json({ status: 200, data: error });
 
 
-                });
+            //     });
             break;
         case "GET":
             const posts = await db.collection("visitors").find({}).toArray();

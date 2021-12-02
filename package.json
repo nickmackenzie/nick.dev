@@ -27,5 +27,8 @@
     "react-modal": "^3.14.3",
     "react-responsive-modal": "^6.1.0",
     "swiper": "^6.7.5"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^7.0.3"
   }
 }
