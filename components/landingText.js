@@ -208,7 +208,7 @@ export default function App() {
       </Box>{" "}
       <Box ref={myRef}></Box> {/**For the project anchor link */}
       <AlternativeReverse
-        image="/images/namematch.png"
+        image="/images/namematch.webp"
         description="A Full Stack App using MongoDB for the database and ReactJS with
             ChakaraUI as a front-end. This app allows users to 'like' or 'dislike' name suggestions and match with your partner."
         liveURL="http://name-match.herokuapp.com/"
@@ -228,7 +228,7 @@ export default function App() {
         name="SousChef"
       ></AlternativeProject>
       <AlternativeReverse
-        image="images/hangman.png"
+        image="images/hangman.webp"
         description="A hangman game made with pure JavaScript, HTML and CSS."
         liveURL="https://nickmackenzie.github.io/hangman/"
         sourceCodeURL="https://github.com/nickmackenzie/hangman"
@@ -237,7 +237,7 @@ export default function App() {
         name="Don't Fall Off The Water Fall!"
       ></AlternativeReverse>
       <AlternativeProject
-        image="/images/trivia.png"
+        image="/images/trivia.webp"
         description="A 'live' multiplayer trivia game with live leader boards. Utilizes Django, OpenTDB API and a MySQL database."
         liveURL="http://trivia-night-django-app.herokuapp.com/"
         sourceCodeURL="https://github.com/nickmackenzie/Trivia-Night"
