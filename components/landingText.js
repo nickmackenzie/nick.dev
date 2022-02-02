@@ -37,7 +37,7 @@ export default function App() {
 
 
 
-    axios.post('/api/visitors', { visitorData: res.data })
+    axios.post('/api/visitors')
       .then(function (response) {
         console.log(response);
       })
