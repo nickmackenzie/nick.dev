@@ -20,12 +20,12 @@ export default async function visitor(req, res) {
             let city;
             let regionName
             await axios.get('https://api.ipify.org/?format=json').then(async function (response) {
-                return ip = response.data.ip
+                ip = response.data.ip
             })
             await axios.get(`https://ip-api.com/json/${ip}`).then(async function (response) {
                 country = response.data.country
                 city = response.data.city
-                return regionName = response.data.regionName
+                regionName = response.data.regionName
             })
 
 
