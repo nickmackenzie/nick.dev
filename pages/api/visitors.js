@@ -8,13 +8,7 @@ export default async function visitor(req, res) {
     let timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
     switch (req.method) {
         case "POST":
-            // console.log(req.body.visitorData)
-            // let currentDate = format(new Date(), 'MMMM/dd/yyyy')
-            // let currentTime = format(new Date(), 'h:mmbbbb')
-            // let visitorObject = req.body.visitorData
-            // visitorObject.currentDate = currentDate;
-            // visitorObject.currentTime = currentTime;
-            // let newVisitor = await db.collection("visitors").insertOne(visitorObject);
+     
             let ip;
             let country;
             let city;
@@ -34,7 +28,7 @@ export default async function visitor(req, res) {
                 })
                 .then(async function (response) {
                     console.log(response)
-                    res.json({ status: 200, data: newVisitor });
+                    res.json({ status: 200 });
                 })
                 .catch(function (error) {
                     res.json({ status: 200, data: error });
