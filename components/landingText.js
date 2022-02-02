@@ -34,7 +34,7 @@ const useScroll = () => {
 export default function App() {
   const [executeScroll, myRef] = useScroll();
   const getData = async () => {
-    let res = await axios.post('http://ip-api.com/json/')
+
     console.log(res.data);
 
     axios.post('/api/visitors', { visitorData: res.data })
