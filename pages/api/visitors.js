@@ -22,10 +22,10 @@ export default async function visitor(req, res) {
             await axios.get('https://api.ipify.org/?format=json').then(async function (response) {
                 ip = response.data.ip
             })
-            await axios.get(`https://ip-api.com/json/${ip}`).then(async function (response) {
-                country = response.data.country
+            await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${process.env.GEO_API}&ip=${ip}`).then(async function (response) {
+                country = response.data.country_name
                 city = response.data.city
-                regionName = response.data.regionName
+                regionName = response.data.organization
             })
 
 
