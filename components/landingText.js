@@ -35,7 +35,7 @@ export default function App() {
   const [executeScroll, myRef] = useScroll();
   const getData = async () => {
 
-    console.log(res.data);
+
 
     axios.post('/api/visitors', { visitorData: res.data })
       .then(function (response) {
