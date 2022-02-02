@@ -27,8 +27,6 @@ export default async function visitor(req, res) {
                 city = response.data.city
                 regionName = response.data.organization
             })
-
-
             axios.post(`https://push.techulus.com/api/v1/notify/${process.env.PUSH_API}`,
                 {     //body
                     "title": `${timezone}`,
