@@ -70,7 +70,7 @@ export default function ContactMe() {
             <Image
               rounded="lg"
 
-              src="i  mages/headshot.jpg"
+              src="images/headshot.webp"
               alt="Nick Mackenzie - A Striking Young Man"
               placeholder="blur"
               width="auto"
