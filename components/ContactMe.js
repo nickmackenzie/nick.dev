@@ -69,9 +69,9 @@ export default function ContactMe() {
           <Box rounded="md">
             <Image
               rounded="lg"
-
+              priority
               src="images/headshot.webp"
-              alt="Nick Mackenzie - A Striking Young Man"
+              alt="Nick Mackenzie"
               placeholder="blur"
               width="auto"
               height='auto'
@@ -100,7 +100,7 @@ export default function ContactMe() {
                 mt={4}
                 color={useColorModeValue("gray.700", "gray.200")}
               >
-                <Icon as={GrLinkedin} as={GrLinkedin} h={6} w={6} mr={2} />
+                <Icon as={GrLinkedin} h={6} w={6} mr={2} />
 
                 <chakra.h1 px={2} fontSize="sm">
                   <Link

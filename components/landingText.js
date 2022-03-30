@@ -104,7 +104,7 @@ export default function App() {
               bgGradient="linear(to-r, blue.400,teal.500)"
               fontWeight="extrabold"
             >
-              computers&nbsp;
+              code&nbsp;
             </Text>
             and<br></br>
             <Text
@@ -126,7 +126,7 @@ export default function App() {
                 width={iconSize}
                 icon="javascript"
                 logoStyle="original"
-                color="white"
+
                 color={useColorModeValue("gray.900", "gray.100")}
               />
 
