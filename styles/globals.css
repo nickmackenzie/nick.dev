@@ -151,6 +151,6 @@ a {
 .projectButton {
   transition: all 1s ease;
 }
-.hero {
+/* .hero {
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-}
+} */
