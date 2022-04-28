@@ -54,7 +54,7 @@ export default function App() {
 
   return (
     <>
-      <Box px={8} py={24} className='hero' mx="auto">
+      <Box px={8} py={24} className='' mx="auto">
         <Box
           w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
           mx="auto"

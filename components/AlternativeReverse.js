@@ -84,7 +84,7 @@ export default function AlternativeReverse(props) {
         >
           {props.description}
         </chakra.p>
-        <Flex>
+        <Flex direction="column">
           <Button
             as="a"
             colorScheme="green"
@@ -93,7 +93,7 @@ export default function AlternativeReverse(props) {
             justifyContent="center"
             w={{ base: "full", sm: "auto" }}
             mb={{ base: 2, sm: 0 }}
-            size="lg"
+            size="md"
             m="2"
             target="_blank"
             href={props.liveURL}
@@ -115,7 +115,7 @@ export default function AlternativeReverse(props) {
             justifyContent="center"
             w={{ base: "full", sm: "auto" }}
             mb={{ base: 2, sm: 0 }}
-            size="lg"
+            size="md"
             m="2"
             target="_blank"
             href={props.sourceCodeURL}
