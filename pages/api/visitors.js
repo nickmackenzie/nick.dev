@@ -1,26 +1,19 @@
+import { NextResponse } from 'next/server'
 
-import clientPromise from "../../lib/mongodb";
 import axios from 'axios'
 import { format } from 'date-fns'
+
 export default async function visitor(req, res) {
-    const client = await clientPromise;
-    const db = client.db("portfolio");
+    // const client = await clientPromise;
+    // const db = client.db("portfolio");
     let timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
     switch (req.method) {
         case "POST":
-     
+
             let ip;
             let country;
             let city;
             let regionName
-//             await axios.get('https://api.ipify.org/?format=json').then(async function (response) {
-//                 ip = response.data.ip
-//             })
-//             await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${process.env.GEO_API}&ip=${ip}`).then(async function (response) {
-//                 country = response.data.country_name
-//                 city = response.data.city
-//                 regionName = response.data.organization
-//             })
             axios.post(`https://push.techulus.com/api/v1/notify/${process.env.PUSH_API}`,
                 {     //body
                     "title": `${timezone}`,
