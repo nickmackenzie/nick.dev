@@ -138,7 +138,7 @@ export default function ContactMe() {
                   <Link
                     fontSize="16px"
                     target="_blank"
-                    href="https://github.com/nickmackenzie/resume/blob/main/pdf/NickMackenzie_Resume.pdf"
+                    href="https://github.com/nickmackenzie/resume/blob/main/Nick%20MacKenzie%20-%20Resume.pdf"
                   >
                     @resume
                   </Link>
