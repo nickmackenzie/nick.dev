@@ -41,7 +41,7 @@ export default function App() {
       .then(function (response) {
         console.log(response);
       })
-      .catch(function (error) {
+      .catch(function (error) {F
         console.log(error);
       });
   }
@@ -125,7 +125,7 @@ export default function App() {
               <DevIcon
                 width={iconSize}
                 icon="javascript"
-                logoStyle="original"
+                
 
                 color={useColorModeValue("gray.900", "gray.100")}
               />
@@ -163,7 +163,7 @@ export default function App() {
             </Flex>
           </chakra.h4>
 
-          <chakra.p
+          <chakra.div
             px={{ base: 0, lg: 24 }}
             mb={6}
             fontSize={{ base: "lg", md: "xl" }}
@@ -174,7 +174,7 @@ export default function App() {
                 <div className="hero-text"></div>
               </div>
             </div>
-          </chakra.p>
+          </chakra.div>
           <Stack
             direction={{ base: "column", sm: "row" }}
             mb={{ base: 4, md: 8 }}
