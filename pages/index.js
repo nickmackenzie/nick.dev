@@ -15,14 +15,14 @@ let projects = {
     name: "NameMatch",
     altText: ""
   },
-  sousChef: {
+  /* sousChef: {
     image: "/images/souschef.png",
     description: "A Full Stack React app and MongoDB. It utilizes the PrimeReact library for the UI. It Helps organize working cooks with a global prep lists that sets the right amount of 'par-lev' according to the day. ",
     liveURL: "https://souschef3.herokuapp.com/",
     sourceCodeURL: "https://github.com/nickmackenzie/souschef",
     techIcons: "",
     stack: "ReactJS | Mongo-DB | NodeJs | JWT-Authentication",
-    name: "SousChef",
+    name: "SousChef", */
 
   }, hangman: {
     image: "images/hangman.png",
