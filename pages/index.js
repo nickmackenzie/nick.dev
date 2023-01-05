@@ -15,7 +15,7 @@ let projects = {
     name: "NameMatch",
     altText: ""
   },
-  , hangman: {
+  hangman: {
     image: "images/hangman.png",
     description: "A hangman game made with pure JavaScript, HTML and CSS.",
     liveURL: "https://nickmackenzie.github.io/hangman/",
